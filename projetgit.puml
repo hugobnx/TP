@@ -1,0 +1,29 @@
+@startuml
+
+class User {
+  -id: int
+  -username: string
+  -password: string
+  +signup()
+  +login()
+}
+
+class Game {
+  -id: int
+  -title: string
+  -description: string
+  -price: float
+  -added_date: date
+  +add()
+  +delete()
+}
+
+class Collection {
+  -user_id: int
+  -game_id: int
+}
+
+User -> Collection
+Collection -> Game
+
+@enduml
