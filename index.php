@@ -2,10 +2,10 @@
 $servername = "localhost";
 $username = "username";
 $password = "password";
-$dbname = "database_name";
+$dbname = "videogame_collection";
 
 // Create connection
-$conn = mysqli_connect($servername, $username, $password, $dbname);
+$conn = mysqli_connect($servername, $username, $password, $videogame_collection);
 // Check connection
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
@@ -35,7 +35,7 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 
 // Connexion à la base de données
-$db = mysqli_connect('localhost', 'dbuser', 'dbpassword', 'database_name');
+$db = mysqli_connect('localhost', 'dbuser', 'dbpassword', 'videogame_collection');
 
 // Requête pour récupérer les informations de l'utilisateur depuis la base de données
 $query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
