@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "username";
 $password = "password";
-$dbname = "videogame_collection";
+$videogame_collection = "videogame_collection";
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $videogame_collection);
